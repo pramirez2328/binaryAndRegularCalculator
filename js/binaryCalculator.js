@@ -25,7 +25,7 @@ btnClr.addEventListener("click", () => {
 
 btnSum.addEventListener("click", () => {
   a = res.innerText;
-  index = res.innerHTML.length + 1;
+  index = res.innerHTML.length;
   res.innerText += "+";
 });
 
@@ -42,10 +42,21 @@ btnDiv.addEventListener("click", () => {
 });
 
 btnEql.addEventListener("click", () => {
-  let b = res.innerText.slice(index);
-
+  let b = res.innerText.slice(index + 1);
+  let sign = res.innerText[index];
+  let result;
   let first = parseInt(a, 2);
   let second = parseInt(b, 2);
 
-  res.innerHTML = (first + second).toString(2);
+  if (sign === "+") {
+    result = (first + second).toString(2);
+  } else if (sign === "-") {
+    result = (first - second).toString(2);
+  } else if (sign === "*") {
+    result = (first * second).toString(2);
+  } else if (sign === "/") {
+    result = Math.floor(first / second).toString(2);
+  }
+
+  res.innerHTML = result;
 });
