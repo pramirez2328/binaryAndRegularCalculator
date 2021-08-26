@@ -1,34 +1,57 @@
 body {
-  width: 33%;
+  background-color: black;
+}
+
+#container {
+  width: 25%;
   margin: auto;
-  margin-top: 2em;
+  height: 15em;
+}
+
+#binary {
+  width: 100%;
 }
 
 #res {
-  background-color: lightgray;
-  border: solid 1px black;
-  height: 48px;
-  font-size: 20px;
+  border: 2px solid orange;
+  height: 0.3em;
+  font-size: 2em;
+  margin: 0.5em 0;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em;
 }
 
 #btn0,
 #btn1 {
-  background-color: lightgreen;
-  color: brown;
+  background-color: orange;
+  border: 1px solid white;
+  color: white;
+  text-shadow: 1px 1px black;
 }
 
 #btnSum,
 #btnSub,
-#btnDiv,
+#btnMul,
 #btnDiv {
   background-color: black;
-  color: red;
+  border: 1px solid orange;
 }
 
 .btn {
-  width: 25%;
-  height: 36%;
-  font-size: 18px;
-  margin: 0px;
+  width: 23%;
+  height: 3.7em;
+  font-size: 1.5em;
+  margin: 1%;
   float: left;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: orange;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  border: orange 2px solid;
 }
