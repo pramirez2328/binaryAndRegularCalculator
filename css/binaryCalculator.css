@@ -9,8 +9,8 @@ body {
   text-align: center;
 }
 
-#container,
-#container2 {
+.container,
+.container2 {
   width: 25%;
   margin: auto;
   height: auto;
@@ -79,9 +79,20 @@ body {
   border: orange 2px solid;
 }
 
-@media screen and (max-width: 600px) {
-  #container,
-  #container2 {
-    width: 85%;
+@media only screen and (max-width: 600px) {
+  .container,
+  .container2 {
+    width: 90% !important;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .container,
+  .container2 {
+    width: 95% !important;
+  }
+
+  .btn {
+    height: 3.2em;
   }
 }
