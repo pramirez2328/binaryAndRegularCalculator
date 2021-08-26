@@ -10,6 +10,7 @@ const btnDiv = document.getElementById("btnDiv");
 let a;
 let b;
 let index;
+let cond;
 
 btn0.addEventListener("click", () => {
   res.innerText += 0;
@@ -21,24 +22,51 @@ btn1.addEventListener("click", () => {
 
 btnClr.addEventListener("click", () => {
   res.innerText = "";
+  cond = true;
 });
 
 btnSum.addEventListener("click", () => {
-  a = res.innerText;
-  index = res.innerHTML.length;
-  res.innerText += "+";
+  if (condition) {
+    a = res.innerText;
+    index = res.innerHTML.length;
+    res.innerText += "+";
+    cond = false;
+  } else {
+    alert("Only one operation at time \nClick 'result'");
+  }
 });
 
 btnSub.addEventListener("click", () => {
-  res.innerText += "-";
+  if (condition) {
+    a = res.innerText;
+    index = res.innerHTML.length;
+    res.innerText += "-";
+    cond = false;
+  } else {
+    alert("Only one operation at time \nClick 'result'");
+  }
 });
 
 btnMul.addEventListener("click", () => {
-  res.innerText += "*";
+  if (condition) {
+    a = res.innerText;
+    index = res.innerHTML.length;
+    res.innerText += "*";
+    cond = false;
+  } else {
+    alert("Only one operation at time \nClick 'result'");
+  }
 });
 
 btnDiv.addEventListener("click", () => {
-  res.innerText += "/";
+  if (condition) {
+    a = res.innerText;
+    index = res.innerHTML.length;
+    res.innerText += "/";
+    cond = false;
+  } else {
+    alert("Only one operation at time \nClick 'result'");
+  }
 });
 
 btnEql.addEventListener("click", () => {
@@ -59,4 +87,5 @@ btnEql.addEventListener("click", () => {
   }
 
   res.innerHTML = result;
+  cond = true;
 });

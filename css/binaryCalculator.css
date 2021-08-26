@@ -2,17 +2,26 @@ body {
   background-color: black;
 }
 
-#container {
+#calculatorTitle,
+#binaryTitle {
+  color: orange;
+  text-shadow: 1px 0.5px white;
+  text-align: center;
+}
+
+#container,
+#container2 {
   width: 25%;
   margin: auto;
-  height: 15em;
+  height: auto;
 }
 
 #binary {
   width: 100%;
 }
 
-#res {
+#res,
+#resD {
   border: 2px solid orange;
   height: 0.3em;
   font-size: 2em;
@@ -25,7 +34,17 @@ body {
 }
 
 #btn0,
-#btn1 {
+#btn1,
+#btnD0,
+#btnD1,
+#btnD2,
+#btnD3,
+#btnD4,
+#btnD5,
+#btnD6,
+#btnD7,
+#btnD8,
+#btnD9 {
   background-color: orange;
   border: 1px solid white;
   color: white;
@@ -35,7 +54,11 @@ body {
 #btnSum,
 #btnSub,
 #btnMul,
-#btnDiv {
+#btnDiv,
+#btnDSum,
+#btnDSub,
+#btnDMul,
+#btnDDiv {
   background-color: black;
   border: 1px solid orange;
 }
@@ -54,4 +77,11 @@ body {
 .btn:hover {
   opacity: 0.8;
   border: orange 2px solid;
+}
+
+@media screen and (max-width: 600px) {
+  #container,
+  #container2 {
+    width: 85%;
+  }
 }
