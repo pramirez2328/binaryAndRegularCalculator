@@ -15,11 +15,26 @@ const btnDSum = document.getElementById("btnDSum");
 const btnDSub = document.getElementById("btnDSub");
 const btnDMul = document.getElementById("btnDMul");
 const btnDDiv = document.getElementById("btnDDiv");
+const binaryCal = document.getElementById("binaryCal");
+const change = document.getElementById("change");
 
 let aD;
 let bD;
 let indexD;
 let condition = true;
+
+change.addEventListener("click", () => {
+  document.querySelector("body").classList.toggle("body");
+});
+
+binaryCal.addEventListener("click", () => {
+  document.querySelector("#binaryTitle").style.display = "block";
+  document.querySelector("#cal").style.display = "block";
+  document.querySelector(".container").style.display = "block";
+  document.querySelector("#calculatorTitle").style.display = "none";
+  document.querySelector("#binaryCal").style.display = "none";
+  document.querySelector(".container2").style.display = "none";
+});
 
 btnD0.addEventListener("click", () => {
   resD.innerText += 0;

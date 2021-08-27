@@ -7,10 +7,21 @@ const btnSum = document.getElementById("btnSum");
 const btnSub = document.getElementById("btnSub");
 const btnMul = document.getElementById("btnMul");
 const btnDiv = document.getElementById("btnDiv");
+const cal = document.getElementById("cal");
+
 let a;
 let b;
 let index;
 let cond;
+
+cal.addEventListener("click", () => {
+  document.querySelector("#binaryTitle").style.display = "none";
+  document.querySelector("#cal").style.display = "none";
+  document.querySelector(".container").style.display = "none";
+  document.querySelector("#calculatorTitle").style.display = "block";
+  document.querySelector("#binaryCal").style.display = "block";
+  document.querySelector(".container2").style.display = "block";
+});
 
 btn0.addEventListener("click", () => {
   res.innerText += 0;
