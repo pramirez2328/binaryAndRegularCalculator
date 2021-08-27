@@ -77,6 +77,13 @@ header {
   padding: 1em;
 }
 
+#btnEql,
+#btnDEql,
+#btnClr,
+#btnDClr {
+  background-color: white;
+}
+
 #btn0,
 #btn1,
 #btnD0,
