@@ -17,12 +17,17 @@ button {
   color: orange;
   text-shadow: 1px 0.5px black;
   text-align: center;
+  letter-spacing: 7px;
+  margin-top: 1em;
 }
 
-header {
+.header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 2em;
+  width: 25%;
+  margin: auto;
+  margin-top: 1em;
 }
 
 .container,
@@ -41,16 +46,14 @@ header {
 #change {
   background-color: white;
   border-radius: 10px;
-  color: orange;
   border: orange solid 1px;
-  font-size: 1.2em;
   height: 2em;
   padding: 10px;
-  font-weight: bold;
 }
 
 #binaryCal,
-#cal {
+#cal,
+#chDecimal {
   background-color: orange;
   border-radius: 10px;
   color: white;
@@ -58,6 +61,12 @@ header {
   height: 2em;
   padding: 7px;
   font-weight: 500;
+}
+
+#chDecimal {
+  background-color: orange;
+  margin-top: 1em;
+  width: 100%;
 }
 
 #binary {
@@ -136,17 +145,14 @@ header {
     width: 90% !important;
   }
 
-  header {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .header {
+    width: 92%;
   }
 
   #change,
   #calculatorTitle,
   #binaryTitle {
     margin: 0.5em;
-    width: 70%;
   }
 
   .btn {

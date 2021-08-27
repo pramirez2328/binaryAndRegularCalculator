@@ -8,9 +8,10 @@ const btnSub = document.getElementById("btnSub");
 const btnMul = document.getElementById("btnMul");
 const btnDiv = document.getElementById("btnDiv");
 const cal = document.getElementById("cal");
+const chDecimal = document.getElementById("chDecimal");
 
-let a;
-let b;
+let a = "";
+let b = "";
 let index;
 let cond;
 
@@ -81,7 +82,11 @@ btnDiv.addEventListener("click", () => {
 });
 
 btnEql.addEventListener("click", () => {
-  let b = res.innerText.slice(index + 1);
+  b = res.innerText.slice(index + 1);
+  if (a == "" || b == "") {
+    return alert("Enter a number");
+  }
+
   let sign = res.innerText[index];
   let result;
   let first = parseInt(a, 2);
@@ -95,6 +100,31 @@ btnEql.addEventListener("click", () => {
     result = (first * second).toString(2);
   } else if (sign === "/") {
     result = Math.floor(first / second).toString(2);
+  }
+
+  res.innerHTML = result;
+  cond = true;
+});
+
+chDecimal.addEventListener("click", () => {
+  b = res.innerText.slice(index + 1);
+  if (a == "" || b == "") {
+    return alert("Enter a number");
+  }
+
+  let sign = res.innerText[index];
+  let result;
+  let first = parseInt(a, 2);
+  let second = parseInt(b, 2);
+
+  if (sign === "+") {
+    result = first + second;
+  } else if (sign === "-") {
+    result = first - second;
+  } else if (sign === "*") {
+    result = first * second;
+  } else if (sign === "/") {
+    result = Math.floor(first / second);
   }
 
   res.innerHTML = result;

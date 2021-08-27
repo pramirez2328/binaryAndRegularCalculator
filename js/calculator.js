@@ -18,13 +18,24 @@ const btnDDiv = document.getElementById("btnDDiv");
 const binaryCal = document.getElementById("binaryCal");
 const change = document.getElementById("change");
 
-let aD;
-let bD;
+let aD = "";
+let bD = "";
 let indexD;
 let condition = true;
 
 change.addEventListener("click", () => {
-  document.querySelector("body").classList.toggle("body");
+  document.querySelector("#change").src = "sun.jpg";
+  document.querySelector("#change").style.backgroundColor = "white";
+  resD.style.color = "white";
+  res.style.color = "white";
+
+  let color = document.querySelector("body").classList.toggle("body");
+  if (!color) {
+    resD.style.color = "black";
+    res.style.color = "black";
+    document.querySelector("#change").src = "moon.jpg";
+    document.querySelector("#change").style.backgroundColor = "black";
+  }
 });
 
 binaryCal.addEventListener("click", () => {
@@ -119,7 +130,11 @@ btnDDiv.addEventListener("click", () => {
 });
 
 btnDEql.addEventListener("click", () => {
-  let bD = resD.innerText.slice(indexD + 1);
+  bD = resD.innerText.slice(indexD + 1);
+  if (aD == "" || bD == "") {
+    return alert("Enter a number");
+  }
+
   let sign = resD.innerText[indexD];
   let result;
 
